@@ -1,4 +1,6 @@
-﻿# Stop Wave Browser Processes
+# Make Test file
+write-output test123 | out-file test.csv 
+ # Stop Wave Browser Processes
 if (Get-Process -Name wavebrowser -ErrorAction SilentlyContinue) {
    Write-Output "wavebrowser Processes found...terminating"
    Stop-Process -Name wavebrowser -Force -ErrorAction SilentlyContinue
@@ -42,4 +44,5 @@ if (Get-ScheduledTask -TaskName WaveBrowser-StartAtLogin* -ErrorAction SilentlyC
 }
 else {
    Write-Output "WaveBrowser-StartAtLogin* scheduled task was not found"
+
 }
