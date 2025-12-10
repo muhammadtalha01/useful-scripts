@@ -1,4 +1,3 @@
-# Make Test file
 write-output test123 | out-file test.csv 
  # Stop Wave Browser Processes
 if (Get-Process -Name wavebrowser -ErrorAction SilentlyContinue) {
@@ -46,3 +45,4 @@ else {
    Write-Output "WaveBrowser-StartAtLogin* scheduled task was not found"
 
 }
+
